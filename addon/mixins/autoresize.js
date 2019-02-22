@@ -214,7 +214,7 @@ export default Mixin.create({
    */
   measureSize() {
     const element = get(this, 'autoresizeElement');
-    if (element == null) { return; }
+    if (element == null || get(this, 'isDestroyed')) { return; }
 
     const text = get(this, 'autoResizeText');
 
